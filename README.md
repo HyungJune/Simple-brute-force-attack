@@ -41,5 +41,5 @@ Nex1 uses round keys rk0, rk1, rk2, ..., rk10, that the size of a round key is 4
   * VerifyProblem2.java => Verify the master keys found in Problem2.java.
 
 #Result
-In Problem1.java, 18 hours was requried to find the master key.
-In Problem2.java, 30 mins was requried to find the master keys.
+In Problem1.java, 18 hours was requried to find the master key. <br>
+In Problem2.java, 30 mins was requried to find the master keys. <br>
