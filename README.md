@@ -9,7 +9,25 @@ Then, I try to find a master key used in generating a ciphertext by using brute-
 Also, I make a pair generted from double encryption and try to find two master keys (inner and outter) by using Meet-In-The-Middle attack.
 (It assumpts that the two master keys' first two bytes are 0).
 
-#Ne1
+#Nex1
+
+The Nex1 algorithm in Nex1.java uses a SPN structure like AES.
+The SPN structure has some rounds and a round-key scheduler
+The round has 3 components such as round-key XOR, confusion layer (S-box) and diffusion layer.
+
+In Nex1, the length of a master key and block in bytes is 32 and 48 respectively.
+
+Nex1 has 10 rounds SPN.
+
+the S-box in Nex1 is same with AES.
+
+The linear tranform M (diffusion part) is a 3x3 MDS matrix in GF(2^8).
+The GF(2^8) is same with AES ( p(x) = x^8+x^4+x^3+x^1+1).
+The matrix M is [(1,2,2),(2,2,1),(2,1,2)] and the inverse is [(1,F7,F7),(F7,F7,1),(F7,1,F7)].
+
+In a key schedule algorithm, It makes a key sequence W of 544 bits length from the master key K like the follow.
+  W = K||Rotl(K, 5)||Rotl(K, 10)||Rotl(K, 15)||Rotl(K, 20)||....||Rotl(K, 11)||Rotl(K,16).
+  Rotl(x,n) : 
 
 
 
