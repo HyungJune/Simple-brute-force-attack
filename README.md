@@ -27,7 +27,9 @@ The matrix M is [(1,2,2),(2,2,1),(2,1,2)] and the inverse is [(1,F7,F7),(F7,F7,1
 
 In a key schedule algorithm, It makes a key sequence W of 544 bits length from the master key K like the follow. <br>
 > W = K||Rotl(K, 5)||Rotl(K, 10)||Rotl(K, 15)||Rotl(K, 20)||....||Rotl(K, 11)||Rotl(K,16). <br>
-  Rotl(x,n) : 
+  Rotl(x,n) : returns n-bit cyclic shifted x.
 
+Nex1 uses round keys rk0, rk1, rk2, ..., rk10, that the size of a round key is 48 bits, from left to right in W. <br>
+(Nex1 uses 528 bits in W and throw away the remaining bits)
 
 
