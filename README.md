@@ -26,7 +26,7 @@ The GF(2^8) is same with AES ( p(x) = x^8+x^4+x^3+x^1+1). <br>
 The matrix M is [(1,2,2),(2,2,1),(2,1,2)] and the inverse is [(1,F7,F7),(F7,F7,1),(F7,1,F7)].
 
 In a key schedule algorithm, It makes a key sequence W of 544 bits length from the master key K like the follow. <br>
-  W = K||Rotl(K, 5)||Rotl(K, 10)||Rotl(K, 15)||Rotl(K, 20)||....||Rotl(K, 11)||Rotl(K,16). <br>
+   W = K||Rotl(K, 5)||Rotl(K, 10)||Rotl(K, 15)||Rotl(K, 20)||....||Rotl(K, 11)||Rotl(K,16). <br>
   Rotl(x,n) : 
 
 
